@@ -23,13 +23,13 @@
   <!-- features start  -->
 <div class="grid  ">
     <button id="show-add-money-form" class="btn btn-lg">Add Money</button><br>
-    <button class="btn btn-lg">Cash Out</button><br>
-    <button class="btn btn-lg">Transactions</button><br>
+    <button id="show-cash-out-form" class="btn btn-lg">Cash Out</button><br>
+    <button id="show-transaction-history" class="btn btn-lg">Transactions</button><br>
 </div>
   <!-- features end -->
    <div class="divider"></div>
 <!-- Add Money form start -->
- <div id="add-money-form" class="card hidden  text-black bg-slate-50 w-full max-w-sm shrink-0 shadow-2xl">
+ <div id="add-money-form" class="card  text-black bg-slate-50 w-full max-w-sm shrink-0 shadow-2xl">
       <div class="card-body">
         <fieldset class="fieldset">
           <label class="label">Add Money Amount</label>
@@ -44,7 +44,7 @@
 
 <!-- Add Money form end -->
  <!-- Cash Out Form start -->
-  <div id="cash-out-form" class="card  text-black bg-slate-50 w-full max-w-sm shrink-0 shadow-2xl">
+  <div id="cash-out-form" class="card hidden text-black bg-slate-50 w-full max-w-sm shrink-0 shadow-2xl">
       <div class="card-body">
         <fieldset class="fieldset">
           <label class="label">Cash Out Amount</label>
@@ -58,8 +58,8 @@
     </div>
  <!-- Cash Out Form end-->
   <!-- transaction start -->
-   <div id="transaction-section">
-    <h2 class="text-5xl text-center">Transaction History</h2>
+   <div id="transaction-section" class="hidden">
+    <h2 class="text-3xl text-center">Transaction History</h2>
    </div>
   <!-- transaction end -->
 
