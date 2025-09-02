@@ -3,13 +3,26 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
 
     const addMoney = getInputFieldValueById('input-add-money');
     const pinNumber = getInputFieldValueById('input-pin-number'); 
-   
+
+ 
+//    wrong way to validate , i used it only to learn DOM
     if(pinNumber === 1234){
      const balance = getTextFieldValueById('account-balance');
-     console.log(balance, addMoney);
+   if(cashOut > balance){
+    alert('You do not have enough money to cash out');
+    return;
+   }
+   
     const newBalance = balance + addMoney;
-
      document.getElementById('account-balance').innerText = newBalance;
+
+    //  add to transaction history
+     const p = document.createElement('p');
+     p.innerText = `Added: ${addMoney} Tk. New Balance: ${newBalance} `;
+     console.log(p);
+
+    //  should be a common function
+    document.getElementById('transaction-container').appendChild(p);
 
     }
     else{
